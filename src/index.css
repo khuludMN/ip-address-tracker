@@ -1,0 +1,13 @@
+@tailwind base;
+ @tailwind components;
+  @tailwind utilities;
+*{ margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; }
+  
+html, body, #root { min-height: 100%; width: 100%; }
+body { font-family: Arial, Helvetica, sans-serif; }
+.custom-marker { background: transparent; border: none; }
+.map-marker { width: 30px; height: 30px; position: relative; background: black; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
+.map-marker::after { content: ""; position: absolute; width: 12px; height: 12px; background: white; border-radius: 50%; top: 9px; left: 9px; }
+@media (max-width: 640px) { .tracker-header { background-image: url("/images/pattern-bg-mobile.png"); } }
